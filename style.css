@@ -1,0 +1,61 @@
+ h1 {
+    color: rgb(8, 129, 235);
+    text-align: center;
+}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    border: 1px solid red;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+ul {
+    list-style: georgian;
+}
+
+ul li {
+    align-items: center;
+    display: flex;
+    /* default */
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+}
+
+ul li > div {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+/* ul li p {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+} */
+
+/* li.list-item {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+} */
+
+ul li p.completed {
+    text-decoration: line-through;
+}
+
+ul li .delete-btn {}
+
+.add-item {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.add-item .input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
