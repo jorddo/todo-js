@@ -37,13 +37,8 @@ const generateTodo = (todoText) => {
 //   Append the div and delete button to the list item
   todo.appendChild(wrapperDiv);
   todo.appendChild(deleteBtn)
-
-    // todo.appendChild(checkbox);
-    // todo.appendChild(text);
-    // todo.appendChild(deleteBtn);
     
   return todo;
-
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -60,12 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 const createItemInput = document.querySelector('input.item-input');
 const createItemBtn = document.querySelector('button.add-item-btn');
-
 createItemBtn.addEventListener('click', () => {
   const itemValue = createItemInput.value.trim();
   if (itemValue) {
     const newTodo = generateTodo(itemValue);
     itemsList.appendChild(newTodo);
+    createItemInput.value = ''
   }
 });
 
@@ -73,15 +68,13 @@ createItemBtn.addEventListener('click', () => {
  * Delete Todo
  */
 itemsList.addEventListener('click', (event) => {
-    if (event.target.classList.contains('delete-btn')) {
-        const todoItem = event.target.closest('.list-item');
-        if (todoItem) {
-            todoItem.remove();
-        }
+  if (event.target.classList.contains('delete-btn')) {
+    const todoItem = event.target.closest('.list-item');
+    if (todoItem) {
+      todoItem.remove();
     }
+  }
 });
-
-
 
 /**
  * Check Todo
